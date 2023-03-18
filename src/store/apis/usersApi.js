@@ -6,9 +6,7 @@ const usersApi = createApi({
   reducerPath: "users",
   //step 3 end
   //step 4 start
-  baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3005",
-  }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3005" }),
   //step 4 end
   //step 5 start
   endpoints(builder) {

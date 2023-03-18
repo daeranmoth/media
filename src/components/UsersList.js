@@ -1,13 +1,11 @@
 //import { useEffect } from "react";
 //import { useSelector } from "react-redux";
 //import { fetchUsers, addUser } from '../store';
+import Button from "./Button";
+import Skeleton from "./Skeleton";
 //import { useThunk } from '../hooks/use-thunk';
 import UsersListItem from "./UsersListItem";
 import { useFetchUsersQuery, useAddUserMutation } from "../store";
-import Skeleton from "./Skeleton";
-//import ExpandablePanel from "./ExpandablePanel";
-import Button from "./Button";
-//import AlbumsListItem from "./AlbumsListItem";
 
 // function UsersList() {
 //   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -52,6 +50,10 @@ function UsersList({ user }) {
         <Button loading={results.isLoading} onClick={handleAddUser}>
           + Add User
         </Button>
+        {/* <Button loading={isCreatingUser} onClick={handleUserAdd}>
+          + Add User
+        </Button>
+        {creatingUserError && "Error creating user..."} */}
       </div>
       {content}
     </div>

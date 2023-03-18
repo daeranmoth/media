@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-
+//import { usersReducer } from "./slices/usersSlice";
 import { albumsApi } from "./apis/albumsApi";
 import { photosApi } from "./apis/photosApi";
 import { usersApi } from "./apis/usersApi";
@@ -8,6 +8,7 @@ import { usersApi } from "./apis/usersApi";
 //step 7 start
 export const store = configureStore({
   reducer: {
+    //users: usersReducer,
     [usersApi.reducerPath]: usersApi.reducer,
     [albumsApi.reducerPath]: albumsApi.reducer,
     [photosApi.reducerPath]: photosApi.reducer,
